@@ -18,12 +18,12 @@ Beispiel:
     scanf("%d", &x);     // Eingabe
     printf("%d", x);     // Ausgabe
 
-Bei scanf() braucht man fast immer die Adresse mit &:
+Bei scanf() braucht man fast immer die address mit &:
     scanf("%d", &x);
 
 Ausnahme:
     char name[20];
-    scanf("%19s", name); // kein &, weil Arrayname schon Adresse ist
+    scanf("%19s", name); // kein &, weil Arrayname schon address ist
 
 Die genaue Größe eines Datentyps kann je nach Compiler/System anders sein.
 Typisch auf vielen PCs mit GCC:
