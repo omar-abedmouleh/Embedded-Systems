@@ -28,7 +28,47 @@ Stack_t* CreateStack(uint32 maxSize, StackStatus_t *ret_status)
         {
             my_Stack->ElementCount = 0;
             my_Stack->StackMaxSize = maxSize;
+
             my_Stack->stack_ptr = -1;
+            /*
+            Pointer-to-pointer example:
+
+            unsigned int a = 10;
+            unsigned int *ptr = NULL;
+            ptr = &a;
+
+            unsigned int **ptr_ptr = NULL;
+            ptr_ptr = &ptr;
+
+            ptr_ptr
+                gives the address of ptr
+
+            *ptr_ptr
+                gives the value stored in ptr,
+                so it gives the address of a
+
+            **ptr_ptr
+                gives the value of a
+            */
+
+            /*
+            StackArray is a pointer to pointer.
+
+            my_Stack->StackArray is similar to ptr_ptr.
+            It stores the address of the first element of a dynamic array of pointers.
+
+            Each element in this array is a void*.
+            That means each element can store the address of an item.
+
+            my_Stack->StackArray[0]
+                is the first element of the dynamic pointer array
+
+            my_Stack->StackArray[0]
+                is identical to *(my_Stack->StackArray + 0)
+
+            *my_Stack->StackArray
+                is identical to my_Stack->StackArray[0]
+            */
 
             my_Stack->StackArray = (void **)calloc(my_Stack->StackMaxSize, sizeof(void *));
 

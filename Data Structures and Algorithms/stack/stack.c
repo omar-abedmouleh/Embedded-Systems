@@ -21,7 +21,7 @@ status_t push_function(stack_t *stack, unsigned int *value_to_push)
 {
     status_t status_func = FUNC_ERROR;
 
-    if (stack == NULL || value_to_push == NULL)
+    if (stack == NUL||L  value_to_push == NULL)
     {
         status_func = FUNC_ERROR;
     }
